@@ -50,26 +50,33 @@ access. For a detailed description see the core/docs/entityconfig.html file.
     <connection-factory class="org.ofbiz.entity.connection.DBCPConnectionFactory"/>
 
     <delegator name="default" entity-model-reader="main" entity-group-reader="main" entity-eca-reader="main" distributed-cache-clear-enabled="false">
-        <group-map group-name="org.ofbiz" datasource-name="localderby"/>
+<!--        <group-map group-name="org.ofbiz" datasource-name="localderby"/>
         <group-map group-name="org.ofbiz.olap" datasource-name="localderbyolap"/>
-        <group-map group-name="org.ofbiz.tenant" datasource-name="localderbytenant"/>
+        <group-map group-name="org.ofbiz.tenant" datasource-name="localderbytenant"/>-->
         <!-- <group-map group-name="org.ofbiz" datasource-name="localmysql"/>
         <group-map group-name="org.ofbiz.olap" datasource-name="localmysqlolap"/>
         <group-map group-name="org.ofbiz.tenant" datasource-name="localmysqltenant"/>  -->
         <!-- <group-map group-name="org.ofbiz" datasource-name="localpostnew"/>
         <group-map group-name="org.ofbiz.olap" datasource-name="localpostolap"/>
         <group-map group-name="org.ofbiz.tenant" datasource-name="localposttenant"/> -->
+        <group-map group-name="org.ofbiz" datasource-name="localpostgres"/>
+        <group-map group-name="org.ofbiz.olap" datasource-name="localpostgres"/>
+        <group-map group-name="org.ofbiz.tenant" datasource-name="localpostgres"/>
+
     </delegator>
     <delegator name="default-no-eca" entity-model-reader="main" entity-group-reader="main" entity-eca-reader="main" entity-eca-enabled="false" distributed-cache-clear-enabled="false">
-        <group-map group-name="org.ofbiz" datasource-name="localderby"/>
+<!--        <group-map group-name="org.ofbiz" datasource-name="localderby"/>
         <group-map group-name="org.ofbiz.olap" datasource-name="localderbyolap"/>
-        <group-map group-name="org.ofbiz.tenant" datasource-name="localderbytenant"/>
+        <group-map group-name="org.ofbiz.tenant" datasource-name="localderbytenant"/>-->
         <!-- <group-map group-name="org.ofbiz" datasource-name="localmysql"/>
         <group-map group-name="org.ofbiz.olap" datasource-name="localmysqlolap"/>
         <group-map group-name="org.ofbiz.tenant" datasource-name="localmysqltenant"/>  -->
         <!-- <group-map group-name="org.ofbiz" datasource-name="localpostnew"/>
         <group-map group-name="org.ofbiz.olap" datasource-name="localpostolap"/>
         <group-map group-name="org.ofbiz.tenant" datasource-name="localposttenant"/>  -->
+        <group-map group-name="org.ofbiz" datasource-name="localpostgres"/>
+        <group-map group-name="org.ofbiz.olap" datasource-name="localpostgres"/>
+        <group-map group-name="org.ofbiz.tenant" datasource-name="localpostgres"/>
     </delegator>
 
     <!-- be sure that your default delegator (or the one you use) uses the same datasource for test. You must run "ant run-install" before running "ant run-tests" -->
@@ -464,9 +471,9 @@ access. For a detailed description see the core/docs/entityconfig.html file.
         <read-data reader-name="ext-demo"/>
         <inline-jdbc
                 jdbc-driver="org.postgresql.Driver"
-                jdbc-uri="jdbc:postgresql://127.0.0.1/ofbiz"
+                jdbc-uri="jdbc:postgresql://127.0.0.1/ofbizdb"
                 jdbc-username="ofbiz"
-                jdbc-password="ofbiz"
+                jdbc-password="Password11"
                 isolation-level="ReadCommitted"
                 pool-minsize="2"
                 pool-maxsize="250"
