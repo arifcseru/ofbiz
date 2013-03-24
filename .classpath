@@ -124,7 +124,6 @@
 	<classpathentry kind="lib" path="framework/birt/lib/saaj.jar"/>
 	<classpathentry kind="lib" path="framework/birt/lib/scriptapi.jar"/>
 	<classpathentry kind="lib" path="framework/birt/lib/viewservlets.jar"/>
-	<classpathentry kind="lib" path="framework/catalina/lib/tomcat-6.0.36-ecj-3.7.jar"/>
 	<classpathentry kind="lib" path="framework/catalina/lib/tomcat-6.0.36-catalina.jar"/>
 	<classpathentry kind="lib" path="framework/catalina/lib/tomcat-6.0.36-catalina-ha.jar"/>
 	<classpathentry kind="lib" path="framework/catalina/lib/tomcat-6.0.36-catalina-tribes.jar"/>
@@ -219,5 +218,6 @@
 	<classpathentry excluding="org/enhydra/|org/ofbiz/" kind="src" path="specialpurpose/shark/src"/>
 	<classpathentry kind="src" path="specialpurpose/workflow/src"/>
 	<classpathentry exported="true" kind="con" path="GROOVY_DSL_SUPPORT"/>
+	<classpathentry kind="lib" path="framework/catalina/lib/ecj-3.7.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
